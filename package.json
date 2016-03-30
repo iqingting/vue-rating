@@ -1,13 +1,13 @@
 {
   "name": "vue-rating",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "rating component for vue",
-  "main": "index.js",
+  "main": "dist/vue-rating.js",
   "scripts": {
     "build": "webpack -p",
     "dev": "webpack-dev-server --config ./example/webpack.example.config.js --inline --hot"
   },
-  "author": "eleme",
+  "author": "Guanghui Ren",
   "license": "MIT",
   "peerDependencies": {
     "vue": "^1.0.10"
