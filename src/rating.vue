@@ -10,29 +10,30 @@
 </script>
 
 <template>
-  <svg style="display: none;">
-    <symbol id="star" viewBox="0 0 1024 1024">
-      <path class="path1" d="M636 386.016h380l-304 226.016 100 368-306.016-220-304 220 110.016-366.016-304-228h384l122.016-368z"></path>
-    </symbol>
-  </svg>
-  <p>
-    <span>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-    </span>
+  <div>
+    <svg style="display: none;">
+      <symbol id="star" viewBox="0 0 1024 1024">
+        <path class="path1" d="M636 386.016h380l-304 226.016 100 368-306.016-220-304 220 110.016-366.016-304-228h384l122.016-368z"></path>
+      </symbol>
+    </svg>
+    <p>
+      <span>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+      </span>
 
-    <span :style="{width: rateValue / 5 * 100 + '%'}">
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-      <svg><use xlink:href="#star"></use></svg>
-    </span>
-  </p>
-
+      <span :style="{width: rateValue / 5 * 100 + '%'}">
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+        <svg><use xlink:href="#star"></use></svg>
+      </span>
+    </p>
+  </div>
 </template>
 
 <style scoped>

@@ -1,6 +1,6 @@
 {
   "name": "vue-rating",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "rating component for vue",
   "main": "dist/vue-rating.js",
   "scripts": {
