@@ -8,12 +8,30 @@
     },
     data() {
       return {
-        zoomValue: 1,
+        starArr: [1, 2, 3, 4, 5],
+        singleSize: 12,
       };
     },
+    computed: {
+      starSize() {
+        return {
+          width: this.singleSize + 'px',
+          height: this.singleSize + 'px',
+        };
+      },
+      containerSize() {
+        return {
+          width: this.singleSize * 5 + 'px',
+          height: this.singleSize + 'px',
+        };
+      },
+    },
     ready() {
-      const viewportScale = document.querySelector('meta[name="viewport"]').content.match(/initial-scale=(\d+\.?\d+)/)[1];
-      this.zoomValue = 1 / parseFloat(viewportScale);
+      var viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        const viewportScale = viewport.content.match(/initial-scale=(\d?\.?\d?)/)[1];
+        this.singleSize *= 1 / parseFloat(viewportScale);
+      }
     },
   };
 </script>
@@ -25,21 +43,13 @@
         <path class="path1" d="M636 386.016h380l-304 226.016 100 368-306.016-220-304 220 110.016-366.016-304-228h384l122.016-368z"></path>
       </symbol>
     </svg>
-    <p>
+    <p :style="containerSize">
       <span>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
+        <svg :style="starSize" v-for="star in starArr"><use xlink:href="#star"></use></svg>
       </span>
 
       <span :style="{width: rateValue / 5 * 100 + '%'}">
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
-        <svg><use xlink:href="#star"></use></svg>
+        <svg :style="starSize" v-for="star in starArr"><use xlink:href="#star"></use></svg>
       </span>
     </p>
   </div>
@@ -53,7 +63,7 @@
   p {
     position: relative;
     margin: 0;
-    width: 50px;
+    width: 60px;
     height: 12px;
   }
   span {
@@ -62,8 +72,8 @@
     display: flex;
   }
   span svg {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     flex-shrink: 0;
     fill: #d1d1d1;
   }

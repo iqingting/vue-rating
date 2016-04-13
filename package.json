@@ -1,11 +1,12 @@
 {
   "name": "vue-rating",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "description": "rating component for vue",
   "main": "dist/vue-rating.js",
   "scripts": {
     "build": "webpack -p",
-    "dev": "webpack-dev-server --config ./example/webpack.example.config.js --inline --hot"
+    "dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot",
+    "remote-dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot --host"
   },
   "author": "Guanghui Ren",
   "license": "MIT",
