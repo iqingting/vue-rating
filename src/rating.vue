@@ -65,6 +65,7 @@
     margin: 0;
     width: 60px;
     height: 12px;
+    white-space: nowrap;
   }
   span {
     position: absolute;
