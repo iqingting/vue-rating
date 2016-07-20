@@ -29,7 +29,8 @@
     ready() {
       var viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {
-        const viewportScale = viewport.content.match(/initial-scale=(\d?\.?\d?)/)[1];
+        let scale = viewport.content.match(/initial-scale=(\d?\.?\d*)/) || [];
+        let viewportScale = scale[1] || 1;
         this.singleSize *= 1 / parseFloat(viewportScale);
       }
     },

@@ -5,7 +5,7 @@
   "main": "dist/vue-rating.js",
   "scripts": {
     "build": "webpack -p",
-    "dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot",
+    "dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot --port",
     "remote-dev": "webpack-dev-server --config ./webpack.example.config.js --inline --hot --host"
   },
   "author": "Guanghui Ren",
